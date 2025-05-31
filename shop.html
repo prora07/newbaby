@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop - Trendy Shoes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Netflix Red */
+    :root {
+      --netflix-red: #E50914;
+    }
+  </style>
+</head>
+<body class="bg-black text-gray-200">
+
+  <!-- Navbar -->
+  <nav class="bg-black shadow-md p-4 flex justify-between items-center border-b border-gray-800">
+    <div class="text-2xl font-bold text-red-600">Trendy Tees</div>
+    <div class="space-x-6 hidden md:flex">
+      <a href="#" class="hover:text-red-600">Home</a>
+      <a href="#products" class="hover:text-red-600">Products</a>
+      <button onclick="toggleCart()" class="hover:text-red-600">Cart 🛒 (<span id="cart-count">0</span>)</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-[#141414] text-center py-10 border-b border-gray-800">
+    <h1 class="text-4xl font-bold text-red-600">Trendy shoes for Everyone</h1>
+    <p class="mt-2 text-lg text-gray-300">Fresh looks. Great prices.</p>
+  </header>
+
+ <!-- Product Listing -->
+  <section id="products" class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Product Card 1 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="Campus" data-price="999">
+      <img src="C:\Users\123\Desktop\web design\preetha\campus.jpeg" alt="Campus" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">Campus</h3>
+        <p class="text-gray-600">$999</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="BRUTON RUNNER" data-price="999">
+      <img src="C:\Users\123\Desktop\web design\preetha\BRUTON RUNNER.jpeg" alt="BRUTON RUNNER" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">BRUTON RUNNER</h3>
+        <p class="text-gray-600">$999</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="PUMA" data-price="899">
+      <img src="C:\Users\123\Desktop\web design\preetha\PUMA.jpeg" alt="PUMA" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">PUMA</h3>
+        <p class="text-gray-600">$899</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="BATA" data-price="899">
+      <img src="C:\Users\123\Desktop\web design\preetha\BATA.jpeg" alt="BATA" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">BATA</h3>
+        <p class="text-gray-600">$899</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 5 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="ASIAN" data-price="799">
+      <img src="C:\Users\123\Desktop\web design\preetha\ASIAN.jpeg" alt="ASIAN" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">ASIAN</h3>
+        <p class="text-gray-600">$799</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 6 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="NIKE" data-price="799">
+      <img src="C:\Users\123\Desktop\web design\preetha\NIKE.jpeg" alt="NIKE" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">NIKE</h3>
+        <p class="text-gray-600">$799</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 7 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="NEON" data-price="500">
+      <img src="C:\Users\123\Desktop\web design\preetha\NEON.jpeg" alt="NEON" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">NEON</h3>
+        <p class="text-gray-600">$500</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 8 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="AEXA" data-price="600">
+      <img src="C:\Users\123\Desktop\web design\preetha\AEXA.jpeg" alt="AEXA" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">AEXA</h3>
+        <p class="text-gray-600">$600</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 9 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="CHELSEA" data-price="399">
+      <img src="C:\Users\123\Desktop\web design\preetha\CHELSEA.jpeg" alt="CHELSEA" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">CHELSEA</h3>
+        <p class="text-gray-600">$399</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 10 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="CHELSEA 302" data-price="499">
+      <img src="C:\Users\123\Desktop\web design\preetha\CHELSEA 304.jpeg" alt="CHELSEA 302" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">CHELSEA 302</h3>
+        <p class="text-gray-600">$499</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Sidebar -->
+  <div id="cart" class="fixed top-0 right-0 w-80 h-full bg-[#141414] shadow-lg p-6 hidden flex-col z-50 border-l border-gray-700">
+    <h2 class="text-xl font-bold mb-4 text-red-600">Your Cart</h2>
+    <div id="cart-items" class="space-y-4 flex-grow overflow-auto text-gray-300"></div>
+    <div class="mt-4">
+      <p class="text-lg">Total: $<span id="cart-total">0</span></p>
+      <button onclick="checkout()" class="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 w-full transition">Checkout</button>
+    </div>
+    <button onclick="toggleCart()" class="absolute top-4 right-4 text-gray-400 hover:text-red-600 text-2xl">✖</button>
+  </div>
+
+  <!-- Bill Modal -->
+  <div id="bill-modal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden z-60">
+    <div class="bg-[#1f1f1f] rounded-lg w-96 max-w-full p-6 relative border border-gray-700">
+      <h2 class="text-2xl font-bold mb-4 text-red-600">Final Bill</h2>
+      <div id="bill-details" class="max-h-64 overflow-y-auto mb-4 border border-gray-600 rounded p-3 text-gray-300">
+        <!-- Bill items go here -->
+      </div>
+      <div class="space-y-1 text-right text-gray-300">
+        <p class="font-semibold">Subtotal: $<span id="bill-subtotal">0</span></p>
+        <p class="font-semibold">Tax (10%): $<span id="bill-tax">0</span></p>
+        <p class="font-semibold">Discount (5%): -$<span id="bill-discount">0</span></p>
+        <p class="text-xl font-bold mt-2 text-red-600">Total: $<span id="bill-total">0</span></p>
+      </div>
+      <div class="mt-4 flex justify-end space-x-4">
+        <button onclick="closeBillModal()" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 text-center p-4 mt-10 border-t border-gray-800">
+    <p>&copy; 2025 Trendy Tees | <a href="#" class="underline hover:text-red-600">About</a> | <a href="#" class="underline hover:text-red-600">Contact</a> | <a href="#" class="underline hover:text-red-600">Terms</a></p>
+  </footer>
+
+  <script>
+    let cart = [];
+
+    function addToCart(button) {
+      const card = button.closest("div[data-name]");
+      const name = card.getAttribute("data-name");
+      const price = parseFloat(card.getAttribute("data-price"));
+
+      const existingProduct = cart.find(item => item.name === name);
+
+      if (existingProduct) {
+        existingProduct.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const cartCount = document.getElementById("cart-count");
+      const cartTotal = document.getElementById("cart-total");
+      const cartItems = document.getElementById("cart-items");
+
+      cartItems.innerHTML = "";
+      let total = 0;
+      let totalQuantity = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price * item.quantity;
+        totalQuantity += item.quantity;
+
+        const div = document.createElement("div");
+        div.classList.add("flex", "justify-between", "items-center", "border-b", "border-gray-700", "pb-2");
+
+        div.innerHTML = `
+          <div>
+            <p class="font-semibold text-gray-200">${item.name}</p>
+            <p class="text-sm text-gray-400">$${item.price} × ${item.quantity}</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button onclick="changeQuantity(${index}, -1)" class="text-red-600 hover:text-red-800 font-bold px-2">−</button>
+            <span>${item.quantity}</span>
+            <button onclick="changeQuantity(${index}, 1)" class="text-red-600 hover:text-red-800 font-bold px-2">+</button>
+          </div>
+        `;
+
+        cartItems.appendChild(div);
+      });
+
+      cartCount.textContent = totalQuantity;
+      cartTotal.textContent = total.toFixed(2);
+    }
+
+    function changeQuantity(index, delta) {
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    function toggleCart() {
+      const cartEl = document.getElementById("cart");
+      cartEl.classList.toggle("hidden");
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+
+      const billModal = document.getElementById("bill-modal");
+      const billDetails = document.getElementById("bill-details");
+      const billSubtotal = document.getElementById("bill-subtotal");
+      const billTax = document.getElementById("bill-tax");
+      const billDiscount = document.getElementById("bill-discount");
+      const billTotal = document.getElementById("bill-total");
+
+      billDetails.innerHTML = "";
+      let subtotal = 0;
+
+      cart.forEach(item => {
+        const lineTotal = item.price * item.quantity;
+        subtotal += lineTotal;
+
+        const p = document.createElement("p");
+        p.textContent = `${item.name} - $${item.price} × ${item.quantity} = $${lineTotal.toFixed(2)}`;
+        billDetails.appendChild(p);
+      });
+
+      const tax = subtotal * 0.10;
+      const discount = subtotal * 0.05;
+      const total = subtotal + tax - discount;
+
+      billSubtotal.textContent = subtotal.toFixed(2);
+      billTax.textContent = tax.toFixed(2);
+      billDiscount.textContent = discount.toFixed(2);
+      billTotal.textContent = total.toFixed(2);
+
+      billModal.classList.remove("hidden");
+    }
+
+    function closeBillModal() {
+      document.getElementById("bill-modal").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Product Listing -->
+  <section id="products" class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Product Card 1 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="Campus" data-price="999">
+      <img src="C:\Users\123\Desktop\web design\preetha\campus.jpeg" alt="Campus" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">Campus</h3>
+        <p class="text-gray-600">$999</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="BRUTON RUNNER" data-price="999">
+      <img src="C:\Users\123\Desktop\web design\preetha\BRUTON RUNNER.jpeg" alt="BRUTON RUNNER" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">BRUTON RUNNER</h3>
+        <p class="text-gray-600">$999</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="PUMA" data-price="899">
+      <img src="C:\Users\123\Desktop\web design\preetha\PUMA.jpeg" alt="PUMA" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">PUMA</h3>
+        <p class="text-gray-600">$899</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="BATA" data-price="899">
+      <img src="C:\Users\123\Desktop\web design\preetha\BATA.jpeg" alt="BATA" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">BATA</h3>
+        <p class="text-gray-600">$899</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 5 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="ASIAN" data-price="799">
+      <img src="C:\Users\123\Desktop\web design\preetha\ASIAN.jpeg" alt="ASIAN" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">ASIAN</h3>
+        <p class="text-gray-600">$799</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 6 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="NIKE" data-price="799">
+      <img src="C:\Users\123\Desktop\web design\preetha\NIKE.jpeg" alt="NIKE" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">NIKE</h3>
+        <p class="text-gray-600">$799</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 7 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="NEON" data-price="500">
+      <img src="C:\Users\123\Desktop\web design\preetha\NEON.jpeg" alt="NEON" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">NEON</h3>
+        <p class="text-gray-600">$500</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 8 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="AEXA" data-price="600">
+      <img src="C:\Users\123\Desktop\web design\preetha\AEXA.jpeg" alt="AEXA" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">AEXA</h3>
+        <p class="text-gray-600">$600</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 9 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="CHELSEA" data-price="399">
+      <img src="C:\Users\123\Desktop\web design\preetha\CHELSEA.jpeg" alt="CHELSEA" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">CHELSEA</h3>
+        <p class="text-gray-600">$399</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Card 10 -->
+    <div class="bg-white shadow-md rounded-lg overflow-hidden" data-name="CHELSEA 302" data-price="499">
+      <img src="C:\Users\123\Desktop\web design\preetha\CHELSEA 304.jpeg" alt="CHELSEA 302" class="w-full">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">CHELSEA 302</h3>
+        <p class="text-gray-600">$499</p>
+        <button onclick="addToCart(this)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </section>

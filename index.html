@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohit Pujari - Portfolio</title>
+  <link rel="icon" type="image/jpg" href="./imegs/p.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Portfolio of Rohit Pujari - A passionate developer from Palghar, India.">
+  <meta name="keywords" content="Rohit Pujari, portfolio, developer, web development, engineering student">
+  <meta name="author" content="Rohit Pujari">
+  <meta property="og:title" content="Rohit Pujari - Portfolio">
+  <meta property="og:description" content="Explore my journey, projects, goals, and contact details.">
+  <meta property="og:image" content="URL_TO_YOUR_IMAGE">
+  <meta property="og:url" content="URL_OF_YOUR_SITE">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            netflixRed: '#E50914',
+            netflixBg: '#141414',
+            netflixBgLight: '#1f1f1f',
+            netflixTextLight: '#e5e5e5',
+            netflixTextMuted: '#bbbbbb',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-netflixBg text-netflixTextLight font-sans">
+
+  <!-- Scroll-to-top button -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+    class="fixed bottom-5 right-5 bg-netflixBgLight text-netflixTextLight p-3 rounded-full shadow-lg hover:bg-netflixRed transition duration-300 z-50">
+    ↑
+  </button>
+
+  <header class="bg-black text-netflixRed py-10 text-center border-b border-netflixRed/50">
+    <h1 class="text-4xl font-extrabold tracking-wide">Welcome to My Portfolio</h1>
+    <p class="mt-2 text-xl text-netflixTextMuted">Hello, I'm <strong class="text-netflixRed">Rohit Pujari</strong>. Here's my journey, achievements, and aspirations!</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-netflixBgLight text-netflixTextLight sticky top-0 z-40 shadow-md border-b border-netflixRed/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="text-2xl font-bold text-netflixRed tracking-wide select-none">Rohit Pujari</div>
+        <div class="block lg:hidden">
+          <button id="menu-toggle" class="focus:outline-none" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex space-x-10 text-lg" id="nav-links">
+          <a href="#welcome" class="hover:text-netflixRed transition">Welcome</a>
+          <a href="#about" class="hover:text-netflixRed transition">About Me</a>
+          <a href="#achievements" class="hover:text-netflixRed transition">Achievements</a>
+          <a href="#goals" class="hover:text-netflixRed transition">Future Goals</a>
+          <a href="#personal" class="hover:text-netflixRed transition">Personal Side</a>
+          <a href="#video" class="hover:text-netflixRed transition">My Video</a>
+          <a href="#contact" class="hover:text-netflixRed transition">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="hidden lg:hidden px-4 pb-4 space-y-2 bg-netflixBgLight" id="mobile-menu">
+      <a href="#welcome" class="block hover:text-netflixRed transition">Welcome</a>
+      <a href="#about" class="block hover:text-netflixRed transition">About Me</a>
+      <a href="#achievements" class="block hover:text-netflixRed transition">Achievements</a>
+      <a href="#goals" class="block hover:text-netflixRed transition">Future Goals</a>
+      <a href="#personal" class="block hover:text-netflixRed transition">Personal Side</a>
+      <a href="#video" class="block hover:text-netflixRed transition">My Video</a>
+      <a href="#contact" class="block hover:text-netflixRed transition">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+  <main class="container mx-auto p-10">
+
+    <!-- Welcome -->
+    <section id="welcome" class="py-12 bg-netflixBgLight rounded-lg mb-10 shadow-lg border border-netflixRed/30">
+      <div class="text-center">
+        <h2 class="text-3xl font-semibold text-netflixRed">Welcome</h2>
+        <div class="mt-6">
+          <img src="C:/Users/123/Desktop/web design/preetha/rohitimage.jpeg" width="200" height="200" alt="My Photo"
+            class="rounded-full mx-auto border-4 border-netflixRed shadow-lg">
+        </div>
+      </div>
+    </section>
+
+    <!-- YouTube Video -->
+    <section id="video" class="py-12 bg-netflixBgLight rounded-lg mb-10 shadow-lg border border-netflixRed/30 text-center">
+      <h2 class="text-3xl font-semibold mb-6 text-netflixRed">My YouTube Recent Video</h2>
+      <p class="text-lg text-netflixTextMuted mb-4">Watch the video directly on YouTube:</p>
+      <a href="https://www.youtube.com/embed/FvGsQHhDUQE" target="_blank"
+        class="inline-block bg-netflixRed hover:bg-red-700 text-white px-6 py-3 rounded-full transition shadow-lg">
+        ▶️ Watch on YouTube
+      </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-12 bg-netflixBgLight rounded-lg mb-10 shadow-lg border border-netflixRed/30">
+      <h2 class="text-3xl font-semibold text-center mb-4 text-netflixRed">About Me</h2>
+      <ul class="space-y-4 text-lg mx-auto max-w-lg text-center text-netflixTextLight">
+        <li><strong>Name:</strong> Rohit Pujari</li>
+        <li><strong>Location:</strong> Palghar, India</li>
+        <li><strong>Education:</strong> Computer Engineering, St. John College of Engineering and Management</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-12 bg-netflixBgLight rounded-lg mb-10 shadow-lg border border-netflixRed/30">
+      <h2 class="text-3xl font-semibold text-center mb-4 text-netflixRed">Skills</h2>
+      <div id="skills-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-center text-netflixTextLight">
+        <p class="col-span-full text-netflixTextMuted">Loading skills...</p>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="py-12 bg-netflixBgLight rounded-lg mb-10 shadow-lg border border-netflixRed/30">
+      <h2 class="text-3xl font-semibold text-center mb-6 text-netflixRed">Achievements</h2>
+      <div id="achievement-list" class="space-y-4 text-lg text-center max-w-2xl mx-auto text-netflixTextLight">
+      </div>
+    </section>
+
+    <!-- Goals -->
+    <section id="goals" class="py-12 bg-netflixBgLight rounded-lg mb-10 shadow-lg border border-netflixRed/30">
+      <h2 class="text-3xl font-semibold text-center mb-4 text-netflixRed">Future Goals</h2>
+      <p class="text-lg text-center max-w-xl mx-auto text-netflixTextMuted">My goal is to become a skilled web developer and build user-friendly, impactful websites for a global audience.</p>
+    </section>
+
+    <!-- Personal -->
+    <section id="personal" class="py-12 bg-netflixBgLight rounded-lg mb-10 shadow-lg border border-netflixRed/30">
+      <h2 class="text-3xl font-semibold text-center mb-4 text-netflixRed">Personal Side</h2>
+      <div class="max-w-xl mx-auto text-lg text-center space-y-4 text-netflixTextLight">
+        <p><strong>Hobbies:</strong> Reading, Painting, Storytelling, and capturing moments through different mediums.</p>
+        <p><strong>Role Models:</strong> Steve Jobs (for inspiration), MS Dhoni (for calm and a sharp mind).</p>
+        <p><strong>Favorite Websites:</strong> GitHub, Notion, Zerodha, CODDY</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 bg-netflixBgLight rounded-lg shadow-lg border border-netflixRed/30">
+      <h2 class="text-3xl font-semibold text-center mb-4 text-netflixRed">Contact Me</h2>
+      <div class="text-center text-lg space-y-4 text-netflixTextMuted">
+        <p>Feel free to reach out to me:</p>
+        <ul class="flex flex-wrap justify-center gap-6 text-netflixTextLight">
+          <li>
+            <a href="mailto:rohit@example.com" class="hover:text-netflixRed transition" aria-label="Email">
+              <i class="fas fa-envelope fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rohitpujari" target="_blank" class="hover:text-netflixRed transition" aria-label="GitHub">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/rohitpujari" target="_blank" class="hover:text-netflixRed transition" aria-label="LinkedIn">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="py-12 px-6 bg-netflixBgLight text-center rounded-lg shadow-lg border border-netflixRed/30">
+      <h2 class="text-3xl font-bold mb-4 text-netflixRed">🛍️ My Shop</h2>
+      <p class="text-netflixTextLight mb-6 max-w-xl mx-auto">
+        Explore my custom-designed online store featuring trendy and comfortable apparel.
+      </p>
+      <a href="shop.html" target="_blank"
+        class="inline-block bg-black text-netflixRed font-semibold px-6 py-3 rounded-full hover:bg-netflixRed hover:text-black transition shadow-lg">
+        Visit LUXURY Store
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-black text-netflixRed text-center border-t border-netflixRed/50">
+    <p>&copy; 2025 Rohit Pujari | All Rights Reserved</p>
+  </footer>
+
+</body>
+
+</html>
